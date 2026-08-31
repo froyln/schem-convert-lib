@@ -14,26 +14,23 @@ npm install @froyln/schem-convert-lib
 
 ```js
 const fs = require('fs');
-const { convertFile, inspectFile, SUPPORTED } = require('@froyln/schem-convert-lib');
+const { convertFile } = require('@froyln/schem-convert-lib');
 
 const input = fs.readFileSync('build.litematic');
-
-const info = await inspectFile(input);
-console.log(info.label); // e.g. "1.21.4"
-
 const { buffer, report } = await convertFile(input, '1.12.2');
 fs.writeFileSync('build-1.12.2.litematic', buffer);
 
 console.log(report.blockLines()); // e.g. ["minecraft:vault -> minecraft:command_block"]
-console.log(report.itemLines());
-console.log(report.noteLines());
 ```
+
+See [docs/usage.md](docs/usage.md) for the full guide: detecting a source version, reading the
+substitution report, error handling, and working with an already-parsed NBT tree.
 
 - `inspectFile(buffer)` — gunzips and parses a `.litematic` buffer, returns `{ nbtVersion,
   dataVersion, label }` describing the source version without converting it.
 - `convertFile(buffer, toMcVersion)` — converts a gzipped `.litematic` buffer to `toMcVersion`,
   returns `{ buffer, report }`. `buffer` is the converted, re-gzipped file. `report` exposes
-  `blockLines()`, `itemLines()`, `noteLines()`, and `.all()`.
+  `blockLines()`, `itemLines()`, `noteLines()`, and `toLines()`.
 - `convertSchematic(root, fromDataVersion, toMcVersion)` — the low-level entry point for callers
   that already hold a parsed NBT root (e.g. via `prismarine-nbt`). Mutates `root` in place and
   returns the same report.
