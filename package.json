@@ -22,6 +22,7 @@
     "index.js",
     "lib/",
     "data/",
+    "docs/",
     "LICENSE",
     "README.md"
   ],

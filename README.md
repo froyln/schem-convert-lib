@@ -69,7 +69,7 @@ npm test          # node --test test/*.test.js
 npm run build-data  # regenerate data/blocks-<version>.json from minecraft-data
 ```
 
-See [AGENTS.md](AGENTS.md) for the full conversion-logic writeup.
+See [docs/architecture.md](docs/architecture.md) for the full conversion-logic writeup.
 
 ## License
 
