@@ -1,6 +1,6 @@
 {
   "name": "@froyln/schem-convert-lib",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Converts Litematica .litematic schematics between Minecraft versions, rewriting the block/item palette so unsupported blocks and items get substituted instead of silently disappearing.",
   "main": "index.js",
   "license": "MIT",

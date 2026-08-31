@@ -12,7 +12,7 @@ const path = require('path');
 const { SUPPORTED, PRE_FLATTENING_MC_VERSION } = require('../lib/versions');
 
 // Pinned so regeneration is reproducible. Bump deliberately.
-const REF = 'fc3f7093feb8a691d8271db4c81a48d16061301e';
+const REF = '9e850c983197a494326677989dc7a16c6205970f';
 const BASE = `https://raw.githubusercontent.com/PrismarineJS/minecraft-data/${REF}/data`;
 
 const OUT_DIR = path.join(__dirname, '..', 'data');

@@ -42,8 +42,11 @@ Both `inspectFile` and `convertFile` are async (`prismarine-nbt`'s parser is pro
 
 ## Supported versions
 
-1.12.2, and 1.13.2 through 1.21.8 (every version in `SUPPORTED`, plus 1.12.2 as a
-downgrade-only target).
+1.12.2, and 1.13.2 through 26.1 (every version in `SUPPORTED`, plus 1.12.2 as a
+downgrade-only target). Mojang dropped the "1." prefix in 2026: 26.1 is the year/drop successor
+to the 1.21.x line, not a typo. 26.2 exists as a released Minecraft version but isn't supported
+here yet — [minecraft-data](https://github.com/PrismarineJS/minecraft-data), the upstream
+project this library's block/item data is generated from, hasn't published its data yet.
 
 ## Limitations
 
