@@ -1,0 +1,35 @@
+{
+  "name": "@froyln/schem-convert-lib",
+  "version": "0.1.0",
+  "description": "Converts Litematica .litematic schematics between Minecraft versions, rewriting the block/item palette so unsupported blocks and items get substituted instead of silently disappearing.",
+  "main": "index.js",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/froyln/schem-convert-lib.git"
+  },
+  "keywords": [
+    "minecraft",
+    "litematic",
+    "litematica",
+    "schematic",
+    "nbt"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "files": [
+    "index.js",
+    "lib/",
+    "data/",
+    "LICENSE",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "node --test test/*.test.js",
+    "build-data": "node scripts/build-blockdata.js"
+  },
+  "dependencies": {
+    "prismarine-nbt": "^2.8.0"
+  }
+}
