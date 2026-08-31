@@ -4,9 +4,6 @@ Converts Litematica `.litematic` schematic files between Minecraft versions, rew
 block and item palette so anything the target version doesn't have gets substituted instead of
 silently disappearing.
 
-Extracted from [Schem-Converter](https://github.com/CodeW4VE/Schem-Converter), a Discord bot
-that uses this library as its conversion engine.
-
 ## Install
 
 ```bash
